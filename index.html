@@ -35,7 +35,7 @@
     <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.2.1.min.js"></script>
     <script main>
         //------------------------------------
-        $vm={};$VmAPI={};$vm.ver=[1.15,1.12];
+        $vm={};$VmAPI={};$vm.ver=[1.01,1.01];
         $vm.start_time=new Date().getTime();
         $vm.api_path_development="https://cbs.wappsystem.com/dev/";
         $vm.api_path_production="https://rt.woolcock.org.au/pro/";
@@ -45,17 +45,17 @@
         if(window.location.hostname=='127.0.0.1' || window.location.hostname=='localhost') $vm.localhost=true;
         //------------------------------------
         $vm.module_links=[
-            "https://cfs-nrs-test.rt.org.au/modules.json",
+            "https://woolcock-imr.github.io/cfs-nrs-test/modules.json",
         ];
         $vm.module_list={
-            "home":             {"url":"https://cfs-nrs-test.rt.org.au/modules/home.html"},
+            "home":             {"url":"https://woolcock-imr.github.io/cfs-nrs-test/modules/home.html"},
         }
         //------------------------------------
         $vm.local_url=function(url){
             if(url==undefined) return "";
             var urlR=url;
             if($vm.localhost==true){
-                urlR=urlR.replace('https://cfs-nrs-test.rt.org.au/','http://127.0.0.1:8000/woolcock-imr/cfs-nrs-test/');
+                urlR=urlR.replace('https://woolcock-imr.github.io/cfs-nrs-test/','http://127.0.0.1:8000/woolcock-imr/cfs-nrs-test/');
             }
             return urlR;
         }
