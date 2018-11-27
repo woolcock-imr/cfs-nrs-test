@@ -43,9 +43,9 @@
                         td.find('u').on('click',function(){
     						var d="";if($vm.server=='development') d="&database=development";
     						var p="?username="+records[I].S2+"&password="+records[I].S3+d;
-    						var q_url="http://cfs-nrs-online-questionnaire-test.rt.org.au/"+p;
+    						var q_url="https://woolcock-imr.github.io/cfs-nrs-online-questionnaire-test/"+p;
                             if(window.location.hostname=='127.0.0.1' || window.location.hostname=='localhost'){
-    							q_url=q_url.replace("http://cfs-nrs-online-questionnaire-test.rt.org.au/","http://127.0.0.1:8000/woolcock-imr/cfs-nrs-online-questionnaire-test/")
+    							q_url=q_url.replace("https://woolcock-imr.github.io/cfs-nrs-online-questionnaire-test/","http://127.0.0.1:8000/woolcock-imr/cfs-nrs-online-questionnaire-test/")
     						};
     						window.open(q_url);
                         });
